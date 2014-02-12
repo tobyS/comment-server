@@ -19,6 +19,8 @@ parameters:
 
     google_client_id:
     google_client_secret:
+    google_client_scope:    "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
 
     github_client_id:
     github_client_secret:
+    github_client_scope:    "user:email"

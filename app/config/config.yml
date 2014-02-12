@@ -118,7 +118,9 @@ hwi_oauth:
             type:                google
             client_id:           %google_client_id%
             client_secret:       %google_client_secret%
+            scope:               %google_client_scope%
         github:
             type:                github
             client_id:           %github_client_id%
             client_secret:       %github_client_secret%
+            scope:               %github_client_scope%
