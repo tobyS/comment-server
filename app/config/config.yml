@@ -6,15 +6,23 @@ framework:
     #esi:             ~
     translator:      { fallback: %locale% }
     secret:          %secret%
-    charset:         UTF-8
-    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     default_locale:  %locale%
+
+    # deafults
+    trusted_hosts: ~
+    trusted_proxies: ~
     session:
-        auto_start:     true
+        # handler_id set to null will use default session handler from php.ini
+        handler_id: ~
+    fragments: ~
+    http_method_override: true
 
 # Twig Configuration
 twig:
@@ -39,6 +47,8 @@ doctrine:
         user:     %database_user%
         password: %database_password%
         charset:  UTF8
+
+        path:     %kernel.root_dir%/data/%database_name%
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
