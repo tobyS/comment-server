@@ -7,30 +7,33 @@
     "require": {
         "php": ">=5.3.3",
 
-        "symfony/symfony": "2.1.*",
-        "symfony/assetic-bundle": "dev-master",
-        "symfony/monolog-bundle": "dev-master",
-        "symfony/swiftmailer-bundle": "dev-master",
+        "symfony/symfony": "*",
+        "symfony/assetic-bundle": "*",
+        "symfony/monolog-bundle": "*",
+        "symfony/swiftmailer-bundle": "*",
 
-        "doctrine/orm": "2.2.*",
-        "doctrine/doctrine-bundle": "dev-master",
+        "doctrine/orm": "*",
+        "doctrine/doctrine-bundle": "*",
 
-        "friendsofsymfony/comment-bundle": "dev-master",
-        "friendsofsymfony/user-bundle": "dev-master",
+        "friendsofsymfony/comment-bundle": "*",
+        "friendsofsymfony/user-bundle": "*",
 
-        "guzzle/guzzle": "2.6.*",
+        "guzzle/guzzle": "*",
 
-        "hwi/oauth-bundle": "dev-master",
+        "hwi/oauth-bundle": "*",
 
-        "jms/security-extra-bundle": "1.1.*",
-        "jms/di-extra-bundle": "1.0.*",
+        "jms/security-extra-bundle": "*",
+        "jms/di-extra-bundle": "*",
 
-        "ornicar/akismet-bundle": "*",
+        "ornicar/akismet-bundle": "dev-master",
 
         "sensio/buzz-bundle": "*",
-        "sensio/distribution-bundle": "dev-master",
+        "sensio/distribution-bundle": "*",
 
-        "twig/extensions": "dev-master"
+        "twig/extensions": "*",
+
+        "friendsofsymfony/rest-bundle": "*",
+        "jms/serializer-bundle": "*"
     },
     "scripts": {
         "post-install-cmd": [
