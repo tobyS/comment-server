@@ -14,12 +14,12 @@
 
 {% if depth == 0 %}
     {% if fos_comment_can_comment_thread(thread) %}
-        {% render "FOSCommentBundle:Thread:newThreadComments" with {"id": thread.id} %}
+        {% render(controller("FOSCommentBundle:Thread:newThreadComments", {"id": thread.id})) %}
     {% else %}
         <div class="meta">
             <h3>Login to Comment</h3>
         </div>
-        {% render "HWIOAuthBundle:Connect:connect" with {}, { standalone: true } %}
+        {% render(controller("HWIOAuthBundle:Connect:connect", {}, { standalone: true })) %}
     {% endif %}
 {% endif %}
 
