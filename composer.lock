@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "16f4515f2b3a590e38c1e71c06184765",
+    "hash": "8bd16c160d2d0c4b68c22c900cf73426",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -626,30 +626,49 @@
         },
         {
             "name": "friendsofsymfony/comment-bundle",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "target-dir": "FOS/CommentBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSCommentBundle.git",
-                "reference": "857d2c4e321f137f9955944c42aa7c53b93d6c09"
+                "reference": "93f2f74cc7ea4141a900464074af7c40e67d1e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/857d2c4e321f137f9955944c42aa7c53b93d6c09",
-                "reference": "857d2c4e321f137f9955944c42aa7c53b93d6c09",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSCommentBundle/zipball/93f2f74cc7ea4141a900464074af7c40e67d1e47",
+                "reference": "93f2f74cc7ea4141a900464074af7c40e67d1e47",
                 "shasum": ""
             },
             "require": {
+                "friendsofsymfony/rest-bundle": "~1.0",
+                "jms/serializer-bundle": "~0.11",
                 "php": ">=5.3.2",
-                "symfony/framework-bundle": "2.*",
-                "symfony/security-bundle": "2.*"
+                "symfony/form": "~2.1",
+                "symfony/framework-bundle": "~2.1",
+                "symfony/security-bundle": "~2.1",
+                "symfony/twig-bundle": "~2.1",
+                "symfony/validator": "~2.1",
+                "symfony/yaml": "~2.1"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "~1.1",
+                "doctrine/orm": "~2.3",
+                "friendsofsymfony/user-bundle": "~1.1",
+                "ornicar/akismet-bundle": "dev-master",
+                "symfony/assetic-bundle": "~2.1",
+                "symfony/browser-kit": "~2.1",
+                "symfony/css-selector": "~2.1"
             },
             "suggest": {
-                "doctrine/couchdb-odm-bundle": "*",
-                "symfony/doctrine-bundle": "*",
-                "symfony/mongodb-odm-bundle": "*"
+                "friendsofsymfony/user-bundle": "Allows for user integration.",
+                "ornicar/akismet-bundle": "Integrate Akismet for spamdetection."
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "FOS\\CommentBundle": ""
@@ -661,17 +680,17 @@
             ],
             "authors": [
                 {
-                    "name": "Thibault Duplessis",
-                    "email": "thibault.duplessis@gmail.com",
-                    "homepage": "http://ornicar.github.com"
-                },
-                {
                     "name": "Tim Nagel",
                     "email": "tim@nagel.com.au"
                 },
                 {
                     "name": "FriendsOfSymfony Community",
                     "homepage": "https://github.com/friendsofsymfony/FOSCommentBundle/contributors"
+                },
+                {
+                    "name": "Alexander Mols",
+                    "email": "iam.asm89@gmail.com",
+                    "homepage": "http://asm89.github.io/"
                 }
             ],
             "description": "This Bundle provides threaded comment functionality for Symfony2 applications",
@@ -681,7 +700,7 @@
                 "forum",
                 "threads"
             ],
-            "time": "2012-02-12 00:59:23"
+            "time": "2014-02-02 06:04:02"
         },
         {
             "name": "friendsofsymfony/rest-bundle",
@@ -2591,6 +2610,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "friendsofsymfony/comment-bundle": 20,
         "ornicar/akismet-bundle": 20
     },
     "platform": {

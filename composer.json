@@ -15,7 +15,7 @@
         "doctrine/orm": "*",
         "doctrine/doctrine-bundle": "*",
 
-        "friendsofsymfony/comment-bundle": "*",
+        "friendsofsymfony/comment-bundle": "dev-master",
         "friendsofsymfony/user-bundle": "*",
 
         "guzzle/guzzle": "*",
