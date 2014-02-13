@@ -8,19 +8,27 @@ index:
     defaults:
         _controller: AppBundle:Index:index
 
-oauth_google:
-    pattern: /login/google-check
+# Original config
+#
+# TODO: Can this be removed?
+#
+# oauth_google:
+#     pattern: /login/google-check
+#
+# oauth_github:
+#     pattern: /login/github-check
+#
+# hwi_oauth_login:
+#     prefix: /login
+#     resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+# 
+# hwi_oauth_connect:
+#     prefix: /login/connect
+#     resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
 
-oauth_github:
-    pattern: /login/github-check
-
-hwi_oauth_login:
-    prefix: /login
-    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
-
-hwi_oauth_connect:
-    prefix: /login/connect
-    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+hwi_oauth_redirect:
+    prefix:   /connect
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
 
 fos_comment_api:
     type: rest
