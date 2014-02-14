@@ -8,23 +8,19 @@ index:
     defaults:
         _controller: AppBundle:Index:index
 
-# Original config
-#
-# TODO: Can this be removed?
-#
-# oauth_google:
-#     pattern: /login/google-check
-#
-# oauth_github:
-#     pattern: /login/github-check
-#
-# hwi_oauth_login:
-#     prefix: /login
-#     resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
-# 
-# hwi_oauth_connect:
-#     prefix: /login/connect
-#     resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+oauth_google:
+    pattern: /login/google-check
+
+oauth_github:
+    pattern: /login/github-check
+
+hwi_oauth_login:
+    prefix: /login
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+
+hwi_oauth_connect:
+    prefix: /login/connect
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
 
 hwi_oauth_redirect:
     prefix:   /connect
@@ -34,6 +30,7 @@ fos_comment_api:
     type: rest
     resource: "@FOSCommentBundle/Resources/config/routing.yml"
     prefix: /comment
+    defaults: {_format: "html"}
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
