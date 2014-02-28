@@ -2,9 +2,13 @@
     {% if error %}
         <span>{{ error }}</span>
     {% endif %}
-    <div id="login_box">
-    {% for owner in hwi_oauth_resource_owners() %}
-        <a href="{{ hwi_oauth_login_url(owner) }}">{{ owner | trans({}, 'HWIOAuthBundle') }}</a> <br />
-    {% endfor %}
+    <div id="login_box" class="login providers">
+        <ul>
+        {% for owner in hwi_oauth_resource_owners() %}
+            <li>
+                <a href="{{ hwi_oauth_login_url(owner) }}" id="login_provider_{{ owner }}">{{ owner | trans({}, 'HWIOAuthBundle') }}</a>
+            </li>
+        {% endfor %}
+        </ul>
     </div>
 {% endblock hwi_oauth_content %}
